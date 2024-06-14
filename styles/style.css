@@ -12,6 +12,7 @@ body {
 .navbar {
     background: #4d781d;
     padding: 1rem;
+    height: 80px;
 }
 
 .navbar ul {
@@ -42,6 +43,10 @@ body {
 
 main {
     text-align: center;
+}
+
+.definisi {
+    text-align: justify;
 }
 
 .article-section {

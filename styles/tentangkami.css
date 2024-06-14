@@ -7,7 +7,8 @@ body {
 
 .navbar {
     background: #4d781d;
-    padding: 1rem;
+    padding: 3rem;
+    height: 80px;
 }
 
 .navbar ul {
@@ -107,18 +108,22 @@ body {
   }
   
   footer {
-    background-color: #3a6b35;
+    background: #4d781d;
     color: #fff;
     text-align: center;
-    padding: 10px 20px;
-  }
-  
-  footer .social-media a {
-    margin: 0 5px;
+    padding: 1rem 0;
+}
+
+footer .social-media {
+    margin-bottom: 0rem;
+}
+
+footer .social-media a {
+    margin: 0 0.5rem;
     display: inline-block;
-  }
-  
-  footer .social-media img {
-    width: 20px;
-    height: 20px;
-  }
+}
+
+footer .social-media a img {
+    width: 24px;
+    height: 24px;
+}
