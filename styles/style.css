@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    background: #4d781d;
+    padding: 1rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 1rem;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.jumbotron {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.jumbotron img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main {
+    text-align: center;
+}
+
+.article-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background: #f4f4f4;
+}
+
+.article-section .text {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.article-section .image {
+    flex: 1;
+    align-self: flex-end;
+}
+
+.article-section .image img {
+    width: 100%;
+    height: auto;
+}
+
+.konten .content {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 2rem 0;
+}
+
+.konten .content img.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container-kelebihan {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background: #e2f5e3;
+}
+
+.content-kelebihan {
+    flex: 1;
+    padding: 1rem;
+    background: #4d781d;
+    color: white;
+    margin: 0 0.5rem;
+    text-align: center;
+}
+
+.content-kelebihan h3 {
+    margin-top: 1rem;
+}
+
+.gallery {
+    padding: 2rem;
+}
+
+.gallery .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.gallery .image-grid img {
+    width: calc(33.333% - 1rem);
+    height: auto;
+}
+
+.location {
+    display: flex;
+    padding: 2rem;
+}
+
+.location .map {
+    flex: 1;
+}
+
+.location .map img {
+    width: 100%;
+    height: auto;
+}
+
+.location .location-text {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+footer {
+    background: #4d781d;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer .social-media {
+    margin-bottom: 0rem;
+}
+
+footer .social-media a {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+footer .social-media a img {
+    width: 24px;
+    height: 24px;
+}
