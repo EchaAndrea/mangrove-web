@@ -9,6 +9,8 @@ body {
     line-height: 1.6;
 }
 
+/* Navbar */
+
 .navbar {
     background: #4d781d;
     padding: 1rem;
@@ -21,13 +23,20 @@ body {
 }
 
 .navbar ul li {
-    margin-left: 1rem;
+    margin-left: 3rem;
+    margin-top: 10px; 
+}
+
+.navbar ul li:first-child {
+    margin-left: 1050px;
 }
 
 .navbar ul li a {
     color: #fff;
     text-decoration: none;
 }
+
+/* Jumbotron */
 
 .jumbotron {
     width: 100%;
@@ -41,73 +50,136 @@ body {
     object-fit: cover;
 }
 
+/* Main */
+
 main {
     text-align: center;
 }
 
+main h1 {
+    font-size: 2rem; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    margin-top: 30px;
+}
+
+/* Pengertian */
+
 .definisi {
+    margin-top: 35px;
     text-align: justify;
 }
 
 .article-section {
     display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-    background: #f4f4f4;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    padding: 2rem; 
+    position: relative;
 }
 
 .article-section .text {
-    flex: 1;
-    margin-right: 2rem;
+    flex: 0;
+    right: 20px; 
+    margin: 30px; 
 }
 
 .article-section .image {
-    flex: 1;
-    align-self: flex-end;
+    margin-top: 50px;
+    flex: 0 0 auto; 
+    width: 500px; 
+    height: auto; 
+    max-width: 100%; 
+    position: relative; 
+    left: 50px; 
+    bottom: 20px; 
 }
 
-.article-section .image img {
-    width: 100%;
-    height: auto;
-}
+/* Kelebihan */
 
-.konten .content {
+.kelebihan {
     position: relative;
-    text-align: center;
-    color: white;
-    padding: 2rem 0;
-}
-
-.konten .content img.background-image {
-    position: absolute;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    background-color: #6fbf73; 
+    color: white; 
+    padding: 4rem 0;
+    overflow: hidden; /* Mengatasi masalah overflow */
 }
 
 .container-kelebihan {
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Menempatkan di depan latar belakang gambar */
+}
+
+.container-kelebihan h2 {
+    font-size: 2.5rem;
+}
+
+.container-kelebihan-detail {
     display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-    background: #e2f5e3;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2; /* Menempatkan di depan latar belakang gambar */
+    margin-top: 2rem;
 }
 
 .content-kelebihan {
-    flex: 1;
-    padding: 1rem;
-    background: #4d781d;
-    color: white;
-    margin: 0 0.5rem;
+    width: calc(33.33% - 2rem);
+    padding: 2rem;
+    background-color: #4d781d; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     text-align: center;
+    position: relative;
+    z-index: 2; /* Menempatkan di depan latar belakang gambar */
 }
 
 .content-kelebihan h3 {
-    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
+.content-kelebihan p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.kelebihan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/image1.jpeg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5); /* Mengatur kecerahan gambar */
+    z-index: 1; /* Menempatkan di belakang konten */
+}
+
+.garis hr {
+    margin-top: 2rem;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Garis pemisah putih transparan */
+    width: 80%;
+}
+
+/* Responsif untuk tata letak kolom */
+@media (max-width: 768px) {
+    .container-kelebihan-detail {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-kelebihan {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Galeri Foto */
 .gallery {
     padding: 2rem;
 }
@@ -122,6 +194,8 @@ main {
     width: calc(33.333% - 1rem);
     height: auto;
 }
+
+/* Peta Lokasi */
 
 .location {
     display: flex;
@@ -140,7 +214,10 @@ main {
 .location .location-text {
     flex: 1;
     padding-left: 2rem;
+    text-align: left;
 }
+
+/* Footer */
 
 footer {
     background: #4d781d;
