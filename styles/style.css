@@ -65,36 +65,36 @@ main h1 {
 
 /* Pengertian */
 
-.definisi {
-    margin-top: 35px;
-    text-align: justify;
-}
-
-.article-section {
-    display: flex;
-    justify-content: flex-start; 
+.container {
+    display: flex; 
+    flex-direction: row; 
     align-items: flex-start; 
-    padding: 2rem; 
-    position: relative;
-}
-
-.article-section .text {
-    flex: 0;
-    right: 20px; 
-    margin: 30px; 
-}
-
-.article-section .image {
-    margin-top: 50px;
-    flex: 0 0 auto; 
-    width: 500px; 
-    height: auto; 
-    max-width: 100%; 
-    position: relative; 
-    left: 50px; 
-    bottom: 20px; 
-}
-
+    padding: 20px; 
+  }
+  
+  .text-content {
+    flex: 2; 
+    margin-right: 20px;
+  }
+  
+.h2 .text-content p, .text-content .definisi {
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+  
+  .image {
+    flex: 1; 
+    text-align: right; 
+  }
+  
+  .image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 40px;
+    margin-right: 600px;
+  }
+  
 /* Kelebihan */
 
 .kelebihan {
