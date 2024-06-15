@@ -36,6 +36,10 @@ body {
     text-decoration: none;
 }
 
+.navbar ul li a:hover {
+  color: #d4d4d4; 
+}
+
 /* Hero */
 
 .hero {
@@ -79,7 +83,7 @@ body {
 
 .about .image {
   text-align: right;
-  margin-top: -515px; 
+  margin-top: -525px; 
 }
 
 .about img {
@@ -133,6 +137,11 @@ footer .social-media {
 footer .social-media a {
     margin: 0 0.5rem;
     display: inline-block;
+}
+
+footer .social-media a:hover {
+  transform: scale(1.1); 
+  filter: brightness(1.2); 
 }
 
 footer .social-media a img {
