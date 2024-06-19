@@ -1,250 +1,279 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
 /* Navbar */
 
 .navbar {
-    background: #4d781d;
-    padding: 1rem;
-    height: 80px;
+  background: #4d781d;
+  padding: 1rem;
+  height: 80px;
 }
 
 .navbar ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .navbar ul li {
-    margin-left: 3rem;
-    margin-top: 10px; 
+  margin-left: 3rem;
+  margin-top: 10px;
 }
 
 .navbar ul li:first-child {
-    margin-left: 1050px;
+  margin-left: 1050px;
 }
 
 .navbar ul li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .navbar ul li a:hover {
-    color: #d4d4d4; 
+  color: #d4d4d4;
 }
 
 /* Jumbotron */
 
 .jumbotron {
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
 }
 
 .jumbotron img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.jumbotron .tooltip {
+  visibility: hidden;
+  width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.jumbotron:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.jumbotron .tooltip a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* Main */
 
 main {
-    text-align: center;
+  text-align: center;
 }
 
 main h1 {
-    font-size: 2rem; 
-    font-weight: bold; 
-    margin-bottom: 20px; 
-    margin-top: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 /* Pengertian */
 
 .container {
-    display: flex; 
-    flex-direction: row; 
-    align-items: flex-start; 
-    padding: 20px; 
-  }
-  
-  .text-content {
-    flex: 2; 
-    margin-right: 20px;
-  }
-  
-.h2 .text-content p, .text-content .definisi {
-    text-align: left;
-    margin-left: 40px;
-    margin-top: 20px;
-  }
-  
-  .image {
-    flex: 1; 
-    text-align: right; 
-  }
-  
-  .image img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 40px;
-    margin-right: 600px;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.text-content {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.h2 .text-content p,
+.text-content .definisi {
+  text-align: left;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.image {
+  flex: 1;
+  text-align: right;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 40px;
+  margin-right: 600px;
+}
+
 /* Kelebihan */
 
 .kelebihan {
-    position: relative;
-    width: 100%;
-    background-color: #6fbf73; 
-    color: white; 
-    padding: 4rem 0;
-    overflow: hidden; /* Mengatasi masalah overflow */
+  position: relative;
+  width: 100%;
+  background-color: #6fbf73;
+  color: white;
+  padding: 4rem 0;
+  overflow: hidden; /* Mengatasi masalah overflow */
 }
 
 .container-kelebihan {
-    text-align: center;
-    position: relative;
-    z-index: 2; /* Menempatkan di depan latar belakang gambar */
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Menempatkan di depan latar belakang gambar */
 }
 
 .container-kelebihan h2 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .container-kelebihan-detail {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    position: relative;
-    z-index: 2; /* Menempatkan di depan latar belakang gambar */
-    margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2; /* Menempatkan di depan latar belakang gambar */
+  margin-top: 2rem;
 }
 
 .content-kelebihan {
-    width: calc(33.33% - 2rem);
-    padding: 2rem;
-    background-color: #4d781d; 
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-    z-index: 2; /* Menempatkan di depan latar belakang gambar */
+  width: calc(33.33% - 2rem);
+  padding: 2rem;
+  background-color: #4d781d;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  z-index: 2; /* Menempatkan di depan latar belakang gambar */
 }
 
 .content-kelebihan h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .content-kelebihan p {
-    font-size: 1rem;
-    line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .kelebihan::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/image1.jpeg');
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.5); /* Mengatur kecerahan gambar */
-    z-index: 1; /* Menempatkan di belakang konten */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/image1.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5); /* Mengatur kecerahan gambar */
+  z-index: 1; /* Menempatkan di belakang konten */
 }
 
 .garis hr {
-    margin-top: 2rem;
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Garis pemisah putih transparan */
-    width: 80%;
+  margin-top: 2rem;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.5); /* Garis pemisah putih transparan */
+  width: 80%;
 }
 
 /* Responsif untuk tata letak kolom */
 @media (max-width: 768px) {
-    .container-kelebihan-detail {
-        flex-direction: column;
-        align-items: center;
-    }
-    .content-kelebihan {
-        width: 100%;
-        margin-bottom: 2rem;
-    }
+  .container-kelebihan-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-kelebihan {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Galeri Foto */
 .gallery {
-    padding: 2rem;
+  padding: 2rem;
 }
 
 .gallery .image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .gallery .image-grid img {
-    width: calc(33.333% - 1rem);
-    height: auto;
+  width: calc(33.333% - 1rem);
+  height: auto;
 }
 
 /* Peta Lokasi */
 
 .location {
-    display: flex;
-    padding: 2rem;
+  display: flex;
+  padding: 2rem;
 }
 
 .location .map {
-    flex: 1;
+  flex: 1;
 }
 
 .location .map img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .location .location-text {
-    flex: 1;
-    padding-left: 2rem;
-    text-align: left;
+  flex: 1;
+  padding-left: 2rem;
+  text-align: left;
 }
 
 /* Footer */
 
 footer {
-    background: #4d781d;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+  background: #4d781d;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 footer .social-media {
-    margin-bottom: 0rem;
+  margin-bottom: 0rem;
 }
 
 footer .social-media a {
-    margin: 0 0.5rem;
-    display: inline-block;
+  margin: 0 0.5rem;
+  display: inline-block;
 }
 
 footer .social-media a:hover {
-    transform: scale(1.1); 
-    filter: brightness(1.2); 
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 footer .social-media a img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
