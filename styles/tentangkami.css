@@ -148,3 +148,33 @@ footer .social-media a img {
     width: 24px;
     height: 24px;
 }
+
+/* Responsif */
+
+@media (max-width: 768px) {
+  .navbar ul {
+      flex-direction: column; /* Menu vertikal pada layar kecil */
+      align-items: center;
+  }
+
+  .navbar ul li {
+      margin: 10px 0; /* Jarak antar menu */
+  }
+
+  .hero {
+      height: 30vh; /* Tinggi hero lebih kecil pada layar kecil */
+  }
+
+  .hero-content h1 {
+      font-size: 1.5em; /* Ukuran font lebih kecil pada layar kecil */
+  }
+
+  .about .image {
+      text-align: center; /* Pusatkan gambar pada layar kecil */
+      margin-top: 0; /* Hapus margin atas gambar pada layar kecil */
+  }
+
+  .species-item {
+      flex: 1 1 calc(50% - 20px); /* 2 item per baris pada layar kecil */
+  }
+}

@@ -48,12 +48,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .hero-content h1 {
+}
+
+.hero-content h1 {
     color: rgb(255, 255, 255);
     font-size: 3em;
-  }
+}
 
 /* Peta */
 
@@ -112,4 +112,31 @@ footer .social-media a:hover {
 footer .social-media a img {
     width: 24px;
     height: 24px;
+}
+
+/* Responsif */
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0; 
+    }
+
+    .map img {
+        width: 100%; 
+        height: auto;
+        max-width: none; 
+    }
+
+    .hero {
+        height: 40vh; 
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em; 
+    }
 }
