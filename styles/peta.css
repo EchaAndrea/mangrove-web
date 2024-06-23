@@ -1,142 +1,245 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
 /* Navbar */
 
 .navbar {
-    background: #4d781d;
-    padding: 1rem;
-    height: 80px;
+  background: #4d781d;
+  padding: 1rem;
+  height: 80px;
 }
 
 .navbar ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .navbar ul li {
-    margin-left: 3rem;
-    margin-top: 10px; 
+  margin-left: 3rem;
+  margin-top: 10px;
 }
 
 .navbar ul li:first-child {
-    margin-left: 1050px;
+  margin-left: 1050px;
 }
 
 .navbar ul li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .navbar ul li a:hover {
-    color: #d4d4d4; 
+  color: #d4d4d4;
 }
 
 /* Hero */
 
 .hero {
-    background: url('../assets/petaatas.png') no-repeat center center/cover;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: url('../assets/petaatas.png') no-repeat center center/cover;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content h1 {
-    color: rgb(255, 255, 255);
-    font-size: 3em;
+  color: rgb(255, 255, 255);
+  font-size: 3em;
 }
 
 /* Peta */
 
 .map-section {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .map-section h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.web-gis {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-bottom: 40px;
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.web-gis iframe {
+  width: 100%;
+  height: 500px; /* Menambah tinggi iframe */
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Transisi saat hover */
+}
+
+.web-gis iframe:hover {
+  transform: scale(1.02); /* Efek zoom saat hover */
+}
+
+.web-gis h3 {
+  margin-top: 10px;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.map-layer-title {
+  margin: 40px 0 20px;
+}
+
+/* Map Grid */
+
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .map {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto 40px;
-    text-align: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 8px; /* Reduce padding */
+  transition: transform 0.3s ease;
+  width: 94%; /* Set a fixed width for the map container */
+  margin: auto; /* Center the container */
+}
+
+.map:hover {
+  transform: scale(1.02); /* Efek zoom saat hover */
 }
 
 .map h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .map img {
-    width: 600px;
-    height: 424.76px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 /* Footer */
 
 footer {
-    background: #4d781d;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+  background: #4d781d;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 footer .social-media {
-    margin-bottom: 0rem;
+  margin-bottom: 0rem;
 }
 
 footer .social-media a {
-    margin: 0 0.5rem;
-    display: inline-block;
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease; /* Transisi saat hover */
 }
 
 footer .social-media a:hover {
-    transform: scale(1.1); 
-    filter: brightness(1.2); 
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 footer .social-media a img {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Responsif */
 
 @media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-    }
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .navbar ul li {
-        margin: 10px 0; 
-    }
+  .navbar ul li {
+    margin: 10px 0;
+  }
 
-    .map img {
-        width: 100%; 
-        height: auto;
-        max-width: none; 
-    }
+  .hero {
+    height: 40vh;
+  }
 
-    .hero {
-        height: 40vh; 
-    }
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
 
-    .hero-content h1 {
-        font-size: 2.5em; 
-    }
+  .web-gis iframe {
+    height: 300px;
+  }
+
+  .map-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CSS untuk modal */
+.modal {
+  display: none; /* Modal tersembunyi secara default */
+  position: fixed; /* Tetap pada tempatnya */
+  z-index: 1; /* Di atas konten lainnya */
+  left: 0;
+  top: 0;
+  width: 100%; /* Lebar penuh */
+  height: 100%; /* Tinggi penuh */
+  overflow: auto; /* Jika konten modal lebih tinggi dari layar */
+  background-color: rgb(0, 0, 0); /* Fallback warna */
+  background-color: rgba(0, 0, 0, 0.9); /* Hitam dengan opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }

@@ -1,64 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mangrove Petengoran</title>
     <link rel="stylesheet" href="../styles/peta.css" />
-</head>
-
-<body>
+  </head>
+  <body>
     <nav class="navbar">
-    <ul>
+      <ul>
         <li><a href="index.html">Beranda</a></li>
         <li><a href="peta.html">Peta</a></li>
         <li><a href="tentangkami.html">Tentang Kami</a></li>
-    </ul>
+      </ul>
     </nav>
-
     <main>
-        <section class="hero">
+      <section class="hero">
         <div class="hero-content">
-            <h1>Peta</h1>
+          <h1>Peta</h1>
         </div>
-    </section>
-
-    <section class="map-section">
-        <h2>Layer Peta Mangrove Petengoran Desa Gebang</h2>
-        <div class="map">
-            <h3>Base Map</h3>
-            <img src="../assets/peta/basemap.png" alt="Base Map">
+      </section>
+      <section class="map-section">
+        <h2>GIS MANGROVE PETENGORAN</h2>
+        <div class="web-gis">
+          <a href="../qgisWeb/index.html" target="_blank">
+            <iframe src="../qgisWeb/index.html" frameborder="0"></iframe>
+            <h3>Klik untuk lihat versi full layar</h3>
+          </a>
         </div>
-        <div class="map">
-            <h3>Peta Jumlah Pohon</h3>
-            <img src="../assets/peta/jumlahpohon.png" alt="Peta Jumlah Pohon">
+        <h2 class="map-layer-title">Layer GIS Mangrove Petengoran Desa Gebang</h2>
+        <div class="map-grid">
+          <div class="map">
+            <h3>Layer Base Map</h3>
+            <img src="../assets/peta/BaseMap.png" alt="Base Map" class="layer-img" />
+          </div>
+          <div class="map">
+            <h3>Layer Jumlah Pohon</h3>
+            <img src="../assets/peta/JumlahP.png" alt="Peta Jumlah Pohon" class="layer-img" />
+          </div>
+          <div class="map">
+            <h3>Layer Kerapatan Mangrove</h3>
+            <img src="../assets/peta/kerapatanmangrove.png" alt="Peta Kerapatan" class="layer-img" />
+          </div>
+          <div class="map">
+            <h3>Layer Jalan</h3>
+            <img src="../assets/peta/Jalan.png" alt="Peta Jalan" class="layer-img" />
+          </div>
+          <div class="map">
+            <h3>Layer Bangunan</h3>
+            <img src="../assets/peta/Bangunan.png" alt="Peta Bangunan" class="layer-img" />
+          </div>
+          <div class="map">
+            <h3>Layer Mangrove Mati</h3>
+            <img src="../assets/peta/MangroveMati.png" alt="Peta Hidup Mati" class="layer-img" />
+          </div>
+          <div class="map">
+            <h3>Layer Zona Mangrove</h3>
+            <img src="../assets/peta/Zona.png" alt="Layer Zona Mangrove" class="layer-img" />
+          </div>
         </div>
-        <div class="map">
-            <h3>Peta Kerapatan</h3>
-            <img src="../assets/peta/kerapatanmangrove.png" alt="Peta Kerapatan">
-        </div>
-        <div class="map">
-            <h3>Peta Jalan</h3>
-            <img src="../assets/peta/jalan.png" alt="Peta Jalan">
-        </div>
-        <div class="map">
-            <h3>Peta Bangunan</h3>
-            <img src="../assets/peta/Bangunan.png" alt="Peta Bangunan">
-        </div>
-        <div class="map">
-            <h3>Peta Hidup Mati</h3>
-            <img src="../assets/peta/hidupmati.png" alt="Peta Hidup Mati">
-        </div>
-    </section>
-
-    <footer>
+      </section>
+      <footer>
         <div class="social-media">
-            <a href="https://www.youtube.com"><img src="../assets/icon/youtube.svg" alt="YouTube"></a>
-            <a href="https://www.twitter.com"><img src="../assets/icon/twitter.svg" alt="Twitter"></a>
-            <a href="https://www.facebook.com"><img src="../assets/icon/facebook.svg" alt="Facebook"></a>
-            <a href="https://www.instagram.com"><img src="../assets/icon/instagram.svg" alt="Instagram"></a> 
+          <a href="https://www.youtube.com"><img src="../assets/icon/youtube.svg" alt="YouTube" /></a>
+          <a href="https://www.twitter.com"><img src="../assets/icon/twitter.svg" alt="Twitter" /></a>
+          <a href="https://www.facebook.com"><img src="../assets/icon/facebook.svg" alt="Facebook" /></a>
+          <a href="https://www.instagram.com"><img src="../assets/icon/instagram.svg" alt="Instagram" /></a>
         </div>
         <p>Hak Cipta © 2024 Universitas Lampung Semua Hak Dilindungi</p>
-    </footer>
-</body>
+      </footer>
+    </main>
+
+    <!-- Modal untuk menampilkan gambar -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById('myModal');
+
+      // Get the image and insert it inside the modal
+      var modalImg = document.getElementById('img01');
+      var images = document.getElementsByClassName('layer-img');
+      for (var i = 0; i < images.length; i++) {
+        images[i].onclick = function () {
+          modal.style.display = 'block';
+          modalImg.src = this.src;
+        };
+      }
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName('close')[0];
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = 'none';
+      };
+    </script>
+  </body>
 </html>

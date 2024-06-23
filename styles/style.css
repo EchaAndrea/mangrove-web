@@ -34,6 +34,7 @@ body {
 .navbar ul li a {
   color: #fff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
@@ -53,6 +54,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.jumbotron:hover img {
+  transform: scale(1.05);
 }
 
 .jumbotron .tooltip {
@@ -93,6 +99,11 @@ main h1 {
   font-weight: bold;
   margin-bottom: 20px;
   margin-top: 30px;
+  transition: transform 0.3s ease;
+}
+
+main h1:hover {
+  transform: translateY(-5px);
 }
 
 /* Pengertian */
@@ -126,6 +137,11 @@ main h1 {
   height: auto;
   margin-top: 40px;
   margin-right: 600px;
+  transition: transform 0.3s ease;
+}
+
+.image img:hover {
+  transform: scale(1.05);
 }
 
 /* Kelebihan */
@@ -147,6 +163,11 @@ main h1 {
 
 .container-kelebihan h2 {
   font-size: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.container-kelebihan h2:hover {
+  transform: translateY(-5px);
 }
 
 .container-kelebihan-detail {
@@ -166,7 +187,12 @@ main h1 {
   border-radius: 10px;
   text-align: center;
   position: relative;
-  z-index: 2; /* Menempatkan di depan latar belakang gambar */
+  z-index: 2; /* Menempatkan di depan konten */
+  transition: transform 0.3s ease;
+}
+
+.content-kelebihan:hover {
+  transform: translateY(-10px);
 }
 
 .content-kelebihan h3 {
@@ -226,6 +252,11 @@ main h1 {
 .gallery .image-grid img {
   width: calc(33.333% - 1rem);
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+.gallery .image-grid img:hover {
+  transform: scale(1.05);
 }
 
 /* Peta Lokasi */
@@ -242,6 +273,11 @@ main h1 {
 .location .map img {
   width: 100%;
   height: auto;
+  transition: transform 0.3s ease;
+}
+
+.location .map img:hover {
+  transform: scale(1.05);
 }
 
 .location .location-text {
@@ -266,6 +302,7 @@ footer .social-media {
 footer .social-media a {
   margin: 0 0.5rem;
   display: inline-block;
+  transition: transform 0.3s ease;
 }
 
 footer .social-media a:hover {
@@ -285,11 +322,11 @@ footer .social-media a img {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .navbar ul li {
     margin: 10px 0;
   }
-  
+
   .navbar ul li:first-child {
     margin-left: 0;
     margin-top: 0;
@@ -297,8 +334,8 @@ footer .social-media a img {
   }
 
   .jumbotron .tooltip {
-    width: 180px; 
-    bottom: 10px; 
+    width: 180px;
+    bottom: 10px;
   }
 
   .container {
@@ -307,27 +344,27 @@ footer .social-media a img {
   }
 
   .image img {
-    margin-right: 0; 
+    margin-right: 0;
   }
 
   .kelebihan {
-    padding: 3rem 0; 
+    padding: 3rem 0;
   }
 
   .container-kelebihan-detail {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
   }
 
   .content-kelebihan {
-    width: 80%; 
+    width: 80%;
   }
 
   .gallery .image-grid img {
-    width: 100%; 
+    width: 100%;
   }
 
   .location {
-    flex-direction: column; 
+    flex-direction: column;
   }
 }
