@@ -2,108 +2,129 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-  }
-  
-  /* Navbar */
-  
-  .navbar {
+}
+
+/* Navbar */
+
+.navbar {
     background: #4d781d;
     padding: 1rem;
     height: 80px;
-  }
-  
-  .navbar ul {
+}
+
+.navbar ul {
     list-style: none;
     display: flex;
-  }
-  
-  .navbar ul li {
+}
+
+.navbar ul li {
     margin-left: 3rem;
     margin-top: 10px;
-  }
-  
-  .navbar ul li:first-child {
+}
+
+.navbar ul li:first-child {
     margin-left: 1050px;
-  }
-  
-  .navbar ul li a {
+}
+
+.navbar ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
-  }
-  
-  .navbar ul li a:hover {
+}
+
+.navbar ul li a:hover {
     color: #d4d4d4;
-  }
-  
-/*
-Tentang Kami
-*/
+}
+
+/* Tentang Kami */
 .tentangkami {
     margin-top: 120px;
     margin-bottom: 50px;
-  }
-  
-  #tim-pengembang {
+}
+
+#tim-pengembang {
     display: grid;
     place-items: center;
     padding: 10px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 10px;
     width: 1200px;
     height: 500px;
     box-sizing: border-box;
     margin: 50px auto;
-  }
-  
-  #tim-pengembang  h2 {
+}
+
+#tim-pengembang h2 {
     color: #000;
     text-align: center;
     padding: 30px;
     font-size: 30px;
-  }
-  
-  .card.team-container {
+}
+
+.card.team-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-  }
-  
-  .team-member {
+}
+
+.team-member {
     text-align: center;
     margin-top: 20px;
     width: 30%;
     flex: 0 1 calc(30% - 20px);
     margin: 0 70px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-  .team-member img {
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+
+.team-member img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
     object-fit: cover;
     margin-bottom: 10px;
-  }
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .social-icons a {
+.team-member img:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
     display: inline-block;
-    margin-right: 0;
     text-decoration: none;
     list-style: none;
-  }
-  
-  .social-icons img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.social-icons img {
     width: 30px;
     height: 30px;
     border: none;
     outline: none;
-  }
+}
 
 /* Footer */
 
@@ -112,79 +133,78 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-  }
-  
-  footer .social-media {
+}
+
+footer .social-media {
     margin-bottom: 0rem;
-  }
-  
-  footer .social-media a {
+}
+
+footer .social-media a {
     margin: 0 0.5rem;
     display: inline-block;
     transition: transform 0.3s ease;
-  }
-  
-  footer .social-media a:hover {
+}
+
+footer .social-media a:hover {
     transform: scale(1.1);
     filter: brightness(1.2);
-  }
-  
-  footer .social-media a img {
+}
+
+footer .social-media a img {
     width: 24px;
     height: 24px;
-  }
-  
-  /* Responsif */
-  
-  @media (max-width: 768px) {
+}
+
+/* Responsif */
+
+@media (max-width: 768px) {
     .navbar ul {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .navbar ul li {
-      margin: 10px 0;
+        margin: 10px 0;
     }
-  
+
     .navbar ul li:first-child {
-      margin-left: 0;
-      margin-top: 0;
-      margin-bottom: 10px;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 10px;
     }
-  
+
     .jumbotron .tooltip {
-      width: 180px;
-      bottom: 10px;
+        width: 180px;
+        bottom: 10px;
     }
-  
+
     .container {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .image img {
-      margin-right: 0;
+        margin-right: 0;
     }
-  
+
     .kelebihan {
-      padding: 3rem 0;
+        padding: 3rem 0;
     }
-  
+
     .container-kelebihan-detail {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .content-kelebihan {
-      width: 80%;
+        width: 80%;
     }
-  
+
     .gallery .image-grid img {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .location {
-      flex-direction: column;
+        flex-direction: column;
     }
-  }
-  
+}
